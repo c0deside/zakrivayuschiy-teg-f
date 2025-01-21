@@ -331,6 +331,7 @@
   );
   padding-block: 28px;
   text-transform: uppercase;
+  transition: opacity 0.3s ease-in-out;
   max-inline-size: clamp(341px, 21.0484rem + 1.1268vw, 353px);
 }
 
@@ -358,6 +359,6 @@
 }
 
 .dialog__button {
-  inline-size: 100%;
   text-transform: inherit;
+  inline-size: 100%;
 }

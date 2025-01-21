@@ -624,13 +624,11 @@
         <p>Вставьте дискету, чтобы продолжить</p>
       </div>
 
-      <button
-        class="button dialog__button"
-        type="button"
-        onclick="window['save-dialog'].close()"
-      >
-        <span class="button__text">Ok</span>
-      </button>
+      <form method="dialog">
+        <button class="button dialog__button" type="submit">
+          <span class="button__text">Ok</span>
+        </button>
+      </form>
     </dialog>
 
     <script src="./scripts/like.js"></script>

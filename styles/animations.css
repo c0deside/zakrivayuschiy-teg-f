@@ -1,4 +1,4 @@
-@keyframes scaling {
+@keyframes scaleIn {
   from {
     scale: 1;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@keyframes sparking {
+@keyframes opacityOut {
   from {
     opacity: 0;
   }
@@ -18,10 +18,60 @@
   }
 }
 
+.card__icon-button {
+  transition: outline-color 0.3s ease;
+}
+
+.like-icon__core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .like-icon__core,
+.like-icon:active .like-icon__core {
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .like-icon__core {
+  transition: fill 0.3s linear;
+}
+
+.like-icon__main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .like-icon__main-body,
+.like-icon:active .like-icon__main-body {
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon__contour {
+  transition: fill 0.1s linear;
+}
+
 .like-icon.is-liked {
-  animation: scaling 0.3s 0.1s ease-in 1 alternate;
+  animation: scaleIn 0.3s 0.1s ease-in 1 alternate;
+}
+
+.like-icon.is-liked .like-icon__contour {
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .like-icon__sparks {
-  animation: sparking 0.3s 0.3s ease-in 1 alternate;
+  animation: opacityOut 0.3s 0.3s ease-in 1 alternate;
+}
+
+.button {
+  transition: box-shadow 0.3s linear;
+}
+
+.button:after {
+  transition: transform 0.5s ease-in-out;
+}
+
+.dialog {
+  transition: opacity 0.3s ease-in-out;
 }
